@@ -3,15 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
 </head>
 <body>
-    <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="center">
-        <mat-tab label="First">Content 1</mat-tab>
-        <mat-tab label="Second">Content 2</mat-tab>
-        <mat-tab label="Third">Content 3</mat-tab>
-      </mat-tab-group>
+  <mat-tab-group fitInkBarToContent mat-stretch-tabs="false" mat-align-tabs="center" class="custom-tab-group">
+    <!-- //------------------------------MAIN------------------------------// -->
+    <mat-tab label="MAIN">
+      <div class="main">
+      <div class="main-container">
+          <div class="back-text">
+              <h1>Welcome to</h1>
+              <h1>Code Geeks</h1>
+          </div>
+  
+          <div class="front-text">
+              <h1>WE ARE THE <span style="color: #FF9100;">FUTURE</span></h1>
+          </div>
+      </div>
+  
+      <div class="about-button">
+          <button><a href="/about">About Us</a></button>
+      </div>
+  </div>
+</mat-tab>
+    <!-- //------------------------------ANNOUNCEMENT------------------------------// -->
+    <mat-tab label="ANNOUNCEMENT">
+      <h1 class="title text-center mt-5 mb-4">NEW ANNOUNCEMENT</h1>
+      <div class="container-announcement">
+        <div class="left-side">
+          <img class="announcement-image" src="/assets/announcement.jpg" alt="Image">
+        </div>
+        <div class="right-side">
+          <p>BE PART OF <br> CODE GEEKS!</p>
+          <button class="btn btn-announcement1">View More</button>
+          <button class="btn btn-announcement2">Register Now!</button>
+        </div>
+      </div>
+    </mat-tab>
+    
+
+        <!-- //------------------------------PROGRAMS------------------------------// -->
+    <mat-tab label="PROGRAMS"><h1 class="title-program text-center mb-4">OUR PROGRAMS</h1>
+      <div class="programs-container">
+        <p>The <span style="color: #FF9100;">Code</span><span style="color: #3D96FB;">Geeks</span> provides a Webinar that the organization can offer for the student's needs, with these different topics of Webinar and professional hosts this could help the student to advance and gain more skills and knowledge about coding. 
+          The <span style="color: #FF9100;">Code</span><span style="color: #3D96FB;">Geeks</span> have provided or organized a lot of activities and programs to help the members in the community/organization, although it is also open with non-members.</p>
+          <br>
+        <p><span style="color: #FF9100;">Schedule</span>/<span style="color: #3D96FB;">Calendar</span>: The Schedules will be announced and marked in the calendar. We will also update or notify you in the group chat, social media and the blogs. Stay Tuned.</p>
+        <div class="btn-container">
+          <button class="btn program-btn">View Events</button>
+          <button class="btn program-btn">Register now!</button>
+        </div>
+      </div>      
+    </mat-tab>
+
+
+    <!-- //------------------------------RESOURCES------------------------------// -->
+    <mat-tab label="RESOURCES">
+      <div class="custom-resources">
+        <h1 class="title text-center mt-5 mb-4">RESOURCES</h1>
+<div class="resources-content">
+        <div class="container-resources mt-5">
+          <div class="row justify-content-center g-3">
+            <div class="col-md-4 text-center mb-4">
+              <div class="d-flex flex-column align-items-center">
+                <img src="/assets/w3schools.png" alt="Button 1" class="img-thumbnail img-fluid smaller-image">
+                <a href="https://www.w3schools.com/" class="btn btn-outline-primary mt-5 custom-btn">W3SCHOOLS</a>
+              </div>
+            </div>
+
+            <div class="col-md-4 text-center mb-4">
+              <div class="d-flex flex-column align-items-center">
+                <img src="/assets/bootstrapcdn.png" alt="Button 2" class="img-thumbnail img-fluid smaller-image">
+                <a href="https://www.bootstrapcdn.com/" class="btn btn-outline-primary mt-5 custom-btn">BOOTSTRAPCDN</a>
+              </div>
+            </div>
+
+            <div class="col-md-4 text-center mb-4">
+              <div class="d-flex flex-column align-items-center">
+                <img src="/assets/vsc.png" alt="Button 3" class="img-thumbnail img-fluid smaller-image">
+                <a href="https://code.visualstudio.com/download" class="btn btn-outline-primary mt-5 custom-btn">DOWNLOAD VSC</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="row justify-content-center g-4">
+            <div class="col-md-4 text-center mb-4 mt-5">
+              <div class="d-flex flex-column align-items-center">
+                <img src="/assets/startbootstrap.png" alt="Button 4" class="img-thumbnail img-fluid smaller-image">
+                <a href="https://startbootstrap.com/" class="btn btn-outline-primary mt-5 custom-btn">BOOTSTRAP</a>
+              </div>
+            </div>
+
+            <div class="col-md-4 text-center mb-4 mt-5">
+              <div class="d-flex flex-column align-items-center">
+                <img src="/assets/python.png" alt="Button 5" class="img-thumbnail img-fluid smaller-image">
+                <a href="https://www.python.org/downloads/" class="btn btn-outline-primary mt-5 custom-btn">DOWNLOAD PYTHON</a>
+              </div>
+            </div>
+            
+            <div class="col-md-4 text-center mb-4 mt-5">
+              <div class="d-flex flex-column align-items-center">
+                <img src="/assets/hackerrank.png" alt="Button 6" class="img-thumbnail img-fluid smaller-image">
+                <a href="https://www.hackerrank.com/" class="btn btn-outline-primary mt-5 custom-btn">TEST YOUR CODING SKILLS</a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </mat-tab>
+
+
+    <!-- //------------------------------POSTS------------------------------// -->
+    <mat-tab label="POSTS"><h1 class="title text-center mt-5 mb-4">NEW POSTS</h1>
+      <div class="container">
+        <div class="box1">
+            <img src="/assets/IMMFI.jpg" alt="Image 1" class="image">
+            <br>
+            <p class="description1">Recent visit to Inocencio Magtoto Memorial Foundation</p>
+            <a href="https://example.com" class="btn btn-post1">View More</a>
+        </div>
+        <div class="box2">
+            <img src="/assets/recent-trivia.jpg" alt="Image 2" class="image">
+            <br>
+            <p class="description2">New Trivia of the Week!</p>
+            <a href="https://example.com" class="btn btn-post2">View More</a>
+        </div>
+    </div>
+    </mat-tab>
+
+
+    <!-- //------------------------------FAQS------------------------------// -->
+    <mat-tab label="FAQS">
+      <h1 class="title text-center mt-5 mb-4">RESOURCES</h1>
+      <!-- Move the paginator here -->
+      <mat-paginator #paginator
+        [length]="questions.length"
+        [pageSize]="1"
+        [hidePageSize]="hidePageSize"
+        (page)="onPageChange($event)">
+      </mat-paginator>
+    </mat-tab>
+  </mat-tab-group>
 </body>
 </html>
-
-  

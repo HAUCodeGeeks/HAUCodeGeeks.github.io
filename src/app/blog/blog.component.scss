@@ -1,0 +1,83 @@
+*{
+  color: white;
+}
+
+::ng-deep .title {
+    font-size: 3.5rem !important; 
+    font-family: LEMONMILK !important;
+    text-shadow: -3px 3px 0px #fff; 
+    color: #FF9100 !important;
+    letter-spacing: 10px !important;
+    margin-top: 145px !important;  
+    text-shadow: -5px 5px 0px #fff;
+  }
+
+  .recents{
+    margin-left: 50px;
+  }
+
+
+  hr {
+    color: white;
+    max-width: 100% !important;
+    border: 2px solid;
+    height: 4px;
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .container-announcement {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin: 3% auto; 
+    max-width: fit-content; 
+  }
+  
+  .left-side {
+    text-align: center;
+    flex: 8%;
+    margin-left: 8%;
+}
+
+.description p{
+  font-family: Montserrat;
+  font-size: 40px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-left: 70px;
+  width: 70%;
+  color: #FF9100 !important;
+}
+
+.right-side {
+    flex: 20%;
+}
+
+  
+  .blog-image {
+    max-width: 65%; 
+    height: auto;
+  }
+  
+  .btn-blog  {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: transparent;
+    --bs-btn-border-color: #FF9100;
+    --bs-btn-hover-color: white;
+    --bs-btn-hover-bg: #FF9100;
+    --bs-btn-hover-border-color: #FF9100;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    --bs-btn-font-size: 15px !important;
+    width: 30%;
+    border-radius: 50px;
+    margin-top: 10%;
+    margin-right: 100px;
+  }
+  
+  .dates p{
+    float: right;
+    margin-right: 50px;
+}

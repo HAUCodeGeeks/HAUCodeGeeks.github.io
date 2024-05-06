@@ -13,6 +13,9 @@ import { ContactComponent } from './contact/contact.component';
 import { BlogComponent } from './blog/blog.component';
 
 import { MatTabsModule } from '@angular/material/tabs';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatIconModule} from '@angular/material/icon';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { MatTabsModule } from '@angular/material/tabs';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    MatTabsModule
+    MatTabsModule,
+    MatPaginatorModule,
+    FormsModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'Varela';
+    src: url('../assets/Varela-Regular.ttf') 
+  }
+
+  @font-face {
+    font-family: 'LEMONMILK';
+    src: url('../assets/LEMONMILK-Regular.otf') ;
+  }
+
+
+hr{
+    margin: 0 auto;
+    border-bottom: 2px solid white;
+    width: 95%;
+}
+
+nav{
+  height: 90px;
+}
+
+.cg-container{
+    margin-left: 30px;
+}
+
+.cg {
+    text-decoration: none;
+    display: flex;
+    margin: auto 0;
+    align-items: center;
+    
+}
+
+.cg img {
+    margin-right: 5px; /* Adjust margin between logo and text */
+  }
+
+.navbar-brand1{
+    color: #FF9100;
+}
+
+.navbar-brand2 {
+    color: #0077ff;
+}
+
+.navbar-brand1, .navbar-brand2 {
+    font-size: 25px;
+    margin: 5px; /* Remove default margin */
+    font-family: LEMONMILK;
+  }
+
+.nav-links a{
+    color: white;
+    font-family: Varela;
+    margin-right: 30px;
+    text-transform: uppercase;
+}
+
+.nav-links a:hover{
+    color: #FF9100;
+}
+

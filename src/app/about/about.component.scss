@@ -1,0 +1,104 @@
+//ABOUT CSS
+.about-us {
+  margin: 200px 0;
+}
+
+.about-container {
+  display: flex !important;
+  justify-content: center; 
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.left-side {
+  max-width: 50%;
+  margin: auto 0;
+}
+
+.left-side h1, .team h1 {
+  font-family: LEMONMILK;
+  font-size: 50px;
+  color: #FF9100;
+  text-shadow: -5px 5px 0px #fff;
+}
+
+.left-side p {
+  font-family: Montserrat;
+  color: #fff;
+  text-align: justify;
+  line-height: 30px;
+}
+
+.right-side {
+  max-width: 50%;
+  margin-left: 40px;
+}
+
+.right-side img {
+  width: 100%;
+}
+
+.hr-width {
+  margin: 0 auto;
+  max-width: 80%;
+  color: white;
+}
+
+.hr-width hr{
+  border-width: 2px;
+}
+
+.team {
+  margin-top: 100px;
+}
+
+.team-title {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.container {
+  justify-content: center !important;
+  text-align: center !important;
+  margin: 0 70px !important;
+}
+
+.officers-cont{
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.officers-cont .box-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 2fr)) !important;
+  gap:45px !important;
+}
+
+.officers-cont .box-container .box{
+  text-align: center !important;
+}
+
+.box img {
+  width: 100%;
+}
+
+.slogan {
+  display: flex;
+  margin: 90px auto;
+}
+
+.slogan h1 {
+  margin: 0 auto;
+  font-size: 60px;
+  font-family: LEMONMILK;
+  color: #0077ff;
+  text-shadow: -5px 5px 0px #fff;
+}
+
+footer {
+  background-color: rgb(22, 22, 22);
+  color: #fff;
+  font-family: Varela;
+  text-align: center;
+  padding: 1.5rem;
+}

@@ -1,0 +1,99 @@
+h1 {
+  text-align: left !important;
+  font-family: LEMONMILK !important;
+  color: #fff !important;
+  letter-spacing: 15px !important;
+  font-size: 90px !important;
+  line-height: 80px !important;
+}
+
+.contact {
+  display: flex;
+  margin-top: 10%;
+}
+
+.container-contact-us {
+  display: flex;
+  margin: 0 auto;
+  max-width: 65%;
+}
+
+.container-contact-us .left-side {
+  flex: 1;
+  text-align: left;
+  padding-right: 20px;
+  margin: auto 0;
+  // margin-top: 5%;
+
+}
+
+.container-contact-us .right-side {
+  flex: 1;
+  text-align: left;
+  max-width: 40%;
+}
+
+.line-div hr{
+  border-color: #FF9100;
+  width: 130px;
+  margin: 0;
+  opacity: 1;
+  border-width: 2px;
+}
+
+
+input[type="text"],
+input[type="email"],
+textarea {
+  color: #fff ;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-family: Montserrat;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+textarea {
+  height: 150px;
+}
+
+.button-cont {
+  text-align: center;
+}
+
+.button-cont input {
+  color: #fff;
+  border: #FF9100 2px solid;
+  border-radius: 50px;
+  font-family: Varela;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.5s;
+  background-color: transparent;
+  text-transform: uppercase;
+}
+.button-cont input:hover {
+  background-color: #FF9100;
+}
+
+.contact-icon {
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.contact-align {
+  text-align: left;
+  margin-top: 50px;
+  font-family: Montserrat;
+  color: #fff;
+}
+
+.label-form {
+  font-family: Varela;
+  color: #fff;
+  margin-bottom: 5px;
+  text-align: left;
+}

@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap 5 Website Example</title>
+  <title>Navbar</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+ <div class="fixed-top"> 
+  <nav class="navbar navbar-expand-sm sticky-top" style="background-color: #2E2E2E;">
     <div class="container-fluid">
       <!-- Brand -->
-      <a class="navbar-brand" href="#">
-        <img src="your-icon.png" alt="Icon" style="width:40px;"> <!-- Adjust width as needed -->
-        Code Geeks
+      <div class="cg-container">
+      <a class="cg" href="#">
+        <img src="/assets/CG-logo.png" alt="Icon" style="width:60px;">
+        <h2 class="navbar-brand1">CODE</h2><h2 class="navbar-brand2"> GEEKS</h2>
       </a>
+    </div>
   
       <!-- Links -->
-      <ul class="navbar-nav ml-auto">
+      <ul class="navbar-nav ml-auto nav-links">
         <li class="nav-item">
           <a class="nav-link active" href="/home">Home</a>
         </li>
@@ -23,10 +26,10 @@
           <a class="nav-link" href="/about">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Blog</a>
+          <a class="nav-link" href="/blog">Blog</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Events</a>
+          <a class="nav-link" href="/events">Events</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/contact">Contact</a>
@@ -34,8 +37,9 @@
       </ul>
     </div>
   </nav>
+  <hr class="sticky-top" style="background-color: #2E2E2E;">
+</div>
   <router-outlet></router-outlet>
+  
   </body>
   </html>
-
-  
