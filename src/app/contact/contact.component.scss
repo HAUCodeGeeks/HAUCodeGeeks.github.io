@@ -5,6 +5,7 @@ h1 {
   letter-spacing: 15px !important;
   font-size: 90px !important;
   line-height: 80px !important;
+  margin-bottom: 50px;
 }
 
 .contact {
@@ -23,8 +24,6 @@ h1 {
   text-align: left;
   padding-right: 20px;
   margin: auto 0;
-  // margin-top: 5%;
-
 }
 
 .container-contact-us .right-side {
@@ -34,7 +33,7 @@ h1 {
 }
 
 .line-div hr{
-  border-color: #FF9100;
+  border-color: #FF9100 ;
   width: 130px;
   margin: 0;
   opacity: 1;

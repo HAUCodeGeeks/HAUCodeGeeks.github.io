@@ -3,6 +3,51 @@
   margin-top: 130px;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
+.mat-mdc-tab-group, .mat-mdc-tab-nav-bar{
+  --mat-tab-header-active-focus-label-text-color: #FF9100;
+  --mat-tab-header-active-label-text-color : #FF9100;
+  --mat-tab-header-inactive-label-text-color: white;
+  --mat-tab-header-inactive-focus-label-text-color: #FF9100;
+  --mat-tab-header-inactive-hover-label-text-color : #FF9100;
+  --mdc-tab-indicator-active-indicator-color: #FF9100;
+  --mat-tab-header-active-hover-label-text-color: #FF9100;
+  --mat-tab-header-active-ripple-color: #FF9100;
+  --mat-tab-header-inactive-ripple-color: #FF9100;
+  --mat-tab-header-active-focus-indicator-color:#FF9100;
+  --mat-tab-header-active-hover-indicator-color:#FF9100;
+  --mat-tab-header-pagination-icon-color: #ffffff;
+}
+
+.paginator {
+  display: flex;
+}
+
+.paginator button {
+  border: 1px solid #ccc;
+  margin: 0 2px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.paginator button.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+::ng-deep .mat-mdc-paginator-container{
+  margin-right: 10px;
+  background-color: transparent;
+}
+
+::ng-deep .mat-mdc-paginator{
+  width: 50%;
+  margin-left: 30px;
+}
+
 //------------------------------MAIN------------------------------//
 .main {
   margin-top: 35%;
@@ -67,6 +112,50 @@
 }
 
 
+@media (max-width: 1024px) {
+  .main {
+    margin-top: 100%; /* Adjust margin-top for smaller screens */
+  }
+
+  .back-text h1 {
+    font-size: 40px; /* Decrease font size for smaller screens */
+    letter-spacing: 10px; /* Adjust letter spacing for smaller screens */
+    width: 100%;
+  }
+
+  .front-text h1 {
+    font-size: 50px; /* Decrease font size for smaller screens */
+    letter-spacing: 6px; /* Adjust letter spacing for smaller screens */
+  }
+
+  .about-button {
+    bottom: 30%; /* Adjust bottom position for smaller screens */
+  }
+}
+
+@media (max-width: 430px) {
+  .main {
+    margin-top: 150%; /* Adjust margin-top for smaller screens */
+  }
+
+  .back-text h1 {
+    font-size: 20px; /* Decrease font size for smaller screens */
+    letter-spacing: 4px; /* Adjust letter spacing for smaller screens */
+    width: 100%;
+  }
+
+  .front-text h1 {
+    font-size: 33px; /* Decrease font size for smaller screens */
+    letter-spacing: 4px; /* Adjust letter spacing for smaller screens */
+    text-shadow: -3px 3px 0px #fff;
+  }
+
+  .about-button {
+    bottom: 30%; /* Adjust bottom position for smaller screens */
+  }
+}
+
+
 //------------------------------ANNOUNCEMENT------------------------------//
 .container-announcement {
   display: flex;
@@ -114,13 +203,13 @@ margin-right: 30px
 
 
 // -----PROGRAMS-----//
-::ng-deep .title-program {
-  font-size: 3.5rem !important; 
+.title-program {
+  font-size: 3.5rem ; 
   font-family: LEMONMILK !important;
   text-shadow: -5px 5px 0px #fff;
   color: #FF9100;
   letter-spacing: 10px !important;
-  margin-top: 110px !important;
+  margin-top: 110px ;
 }
 
 
@@ -162,6 +251,30 @@ margin-right: 30px
   letter-spacing: 3px;
 }
 
+@media (max-width: 768px) {
+  .title-program {
+    font-size: 2.5rem; /* Increase font size for larger screens */
+    text-shadow: -3px 3px 0px #fff;
+  }
+
+  .programs-container{
+    padding: 0 50px; /* Increase padding for larger screens */
+    width: 100%;
+
+  }
+
+  .btn-container {
+    flex-direction: row; /* Arrange buttons horizontally */
+    margin-bottom: 10px;
+  }
+
+  .program-btn {
+    width: 40%; /* Allow buttons to take natural width */
+    margin-right: 32px; /* Add margin between buttons */
+    margin-bottom: 20px;
+  }
+}
+
 
 //------------------------------RESOURCES------------------------------//
 
@@ -175,7 +288,7 @@ margin-right: 30px
     margin: 20px auto;
   }
 
-  ::ng-deep .title {
+.title {
     font-size: 3.5rem !important; 
     font-family: LEMONMILK !important;
     text-shadow: -5px 5px 0px #fff;
@@ -263,47 +376,104 @@ margin-right: 30px
 
 
 //------------------------------FAQ------------------------------//
-.mat-mdc-tab-group, .mat-mdc-tab-nav-bar{
-  --mat-tab-header-active-focus-label-text-color: #FF9100;
-  --mat-tab-header-active-label-text-color : #FF9100;
-  --mat-tab-header-inactive-label-text-color: white;
-  --mat-tab-header-inactive-focus-label-text-color: #FF9100;
-  --mat-tab-header-inactive-hover-label-text-color : #FF9100;
-  --mdc-tab-indicator-active-indicator-color: #FF9100;
-  --mat-tab-header-active-hover-label-text-color: #FF9100;
-  --mat-tab-header-active-ripple-color: #FF9100;
-  --mat-tab-header-inactive-ripple-color: #FF9100;
-  --mat-tab-header-active-focus-indicator-color:#FF9100;
-  --mat-tab-header-active-hover-indicator-color:#FF9100;
+
+::ng-deep .mat-mdc-paginator-icon{
+  fill: white !important;
+}
+
+.mat-mdc-paginator {
+  position: absolute;
+  background-color: transparent;
+  border: rgba(255, 255, 255, 0.521) solid 1px;
+  border-radius: 50px;
+  color: white;
+  right: 23%;
+  font-family: Montserrat;
+  width: 250px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white !important;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+}
+
+.title {
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center; 
+  margin-bottom: 20px; 
+}
+
+.header-FAQS {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.title-faqs {
+  position:relative;
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 auto;
+  z-index: 100;
+  font-family: LEMONMILK;
+  color: #FF9100;
+  text-shadow: -5px 5px 0px #fff;
+}
+
+.mat-paginator-wrapper {
+  display: flex;
+  align-items: center;
 }
 
 .paginator {
+  margin-top: 60px;
+}
+
+.outer-box {
   display: flex;
+  justify-content: center; 
+  align-items: center; 
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+  width: 110vh;
+  height: 55vh;
 }
 
-.paginator button {
-  border: 1px solid #ccc;
-  margin: 0 2px;
-  padding: 5px 10px;
-  cursor: pointer;
+.inner-box {
+  max-width: 85%; 
 }
 
-.paginator button.active {
-  background-color: #007bff;
-  color: #fff;
-}
-
-::ng-deep .mat-mdc-paginator-container{
-  margin-right: 10px;
-  background-color: transparent;
-}
-
-::ng-deep .mat-mdc-paginator{
-  width: 50%;
-  margin-left: 30px;
+.box-container {
+  font-size: 18px;
+  line-height: 30px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 
-::-webkit-scrollbar {
-  display: none;
+.question {
+  font-family: LEMONMILK;
+  font-size: 30px;
+  color: #3D96FB;
+  text-align: left;
+  letter-spacing: 5px;
+  line-height: 45px;
+}
+
+.answer {
+  font-family: Montserrat;
 }

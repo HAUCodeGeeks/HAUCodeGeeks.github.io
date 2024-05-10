@@ -1,0 +1,285 @@
+.title {
+    font-size: 3.5rem !important; 
+    font-family: LEMONMILK !important;
+    color: #ffffff !important;
+    letter-spacing: 10px !important;
+    margin-top: 145px !important;  
+  }
+
+.carousel-container {
+    position: relative;
+    text-align: center;
+    height: 550px;
+}
+
+.content-event {
+    margin: auto 0;
+}
+
+.full-carousel {
+    margin-top: 80px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.carousel-container img {
+  display: none;
+  width: 100%;
+  height: 550px;
+  margin: auto 0;
+  object-fit: cover;
+}
+
+
+.carousel-container img.image-active {
+  display: block;
+  opacity: 1;
+}
+
+.carousel-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.75;
+}
+
+.carousel-dot-container {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.dot {
+  cursor: pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 5px;
+  background-color: white; 
+  border-radius: 50%;
+  display: inline-block;
+  transition: opacity 0.6s ease;
+  opacity: 1;
+  z-index: 999;
+}
+
+
+.active,
+.dot:hover {
+  opacity: 1;
+  background-color: #FF9100; 
+}
+
+.fade{
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade{
+  from{
+    opacity: 0.4;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+.btn-carousel {
+  position: absolute;
+  top: 20%;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15%;
+  padding: 0;
+  color:#fff;
+  text-align: center;
+  background: 00;
+  border: 0;
+  cursor: pointer;
+  z-index: 998;
+}
+
+.btn-prev{
+  left: 0;
+}
+
+.btn-next{
+  right: 0;
+}
+
+.icon-carousel {
+  color: #fff;
+  opacity: 0.5;
+  transition: all 0.15s ease;
+  }
+
+  .icon-carousel:hover {
+  opacity: 0.9;
+  }
+
+  .icon-carousel:active {
+  opacity: 0.5;
+  }
+
+  .icon-prev,
+  .icon-next{
+    font-size: 35px;
+  }
+
+  .title-event {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    color: #FF9100;
+    text-shadow: -5px 5px 0px #fff;
+    z-index: 999;
+    font-family: LEMONMILK;
+    font-size: 80px;
+}
+
+.description {
+    font-family: Montserrat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    color: #ffffff;
+    z-index: 999;
+}
+
+.merch-title {
+    margin: 90px auto;
+    font-family: LEMONMILK;
+    font-size: 70px;
+    color: #FF9100;
+    text-shadow: -5px 5px 0px #fff;
+    text-align: center;
+}
+
+.grid-merch {
+  margin-bottom: 100px;
+}
+
+.merch-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 65%;
+  margin: 0 auto;
+}
+
+.row {
+    width: 100%;
+    margin: 10px 0;
+    display: flex; /* Use flexbox for the parent container */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center; /* Center items horizontally */
+  }
+  
+  .img-container {
+    flex: 1 1 auto; /* Allow items to grow and shrink equally */
+    margin: 5px; /* Add some margin between items */
+  }
+  
+  .img {
+    width: 100%;
+    height: auto; /* Ensure images maintain their aspect ratio */
+  }
+  
+  .img-1 {
+    order: -1; /* Move img-1 to the beginning */
+    max-width: 100% ; /* Adjust max-width for img-1 to take up full width */
+  }
+  
+  @media (min-width: 768px) {
+    .img-2, .img-3, .img-4, .img-5 {
+      max-width: calc(50% - 10px); /* Adjust max-width for img-2 to img-5 for desktop view */
+    }
+  }
+  
+  
+  
+  
+  
+// .img-1{
+// //   background: url('../../assets/membership-card.png') no-repeat center;
+// //   background-size: cover;
+//   width: 100%;
+//   height: 100%;
+//   object-fit: cover;
+// }
+
+// .img-2{
+//   background: url('../../assets/lanyard.jpg') no-repeat center ;
+//   background-size: cover;
+//   width: 100%;
+// }
+
+// .img-3{
+//   background: url('../../assets/lanyard1.jpg') no-repeat center ;
+//   background-size: cover;
+//   width: 100%;
+  
+// }
+
+// .img-4 {
+//   background: url('../../assets/ghibli-stickers.jpg') no-repeat center ;
+//   background-size: cover;
+//   width: 100%;
+  
+// }
+
+// .img-5 {
+//   background: url('../../assets/orig-stickers.png') no-repeat center ;
+//   background-size: cover;
+//   width: 100%;
+  
+// }
+
+// @media (min-width: 320px) {
+
+//   .merch-container {
+//     max-width: 90%;
+//   }
+//   .row{
+//     height: 600px; 
+//   }
+  
+//   .img-1 {
+//     // background-size: contain; /* Change to 'contain' */
+//     width: 90%;
+//     height: 90%;
+//     // position: relative;
+//   }
+  
+
+//   .img-2, .img-3, .img-4, .img-5 {
+//     display: flex;
+//     width: 48.3%;
+//     height: 100%;
+//   }
+
+
+//   // .img-4 {
+//   //   width: 24%;
+//   // }
+
+//   // .img-2,
+//   // .img-3 {
+//   //   width: 70%;
+//   // }
+// }

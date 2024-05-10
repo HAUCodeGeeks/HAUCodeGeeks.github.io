@@ -22,7 +22,7 @@
       </div>
   
       <div class="about-button">
-          <button><a href="/about">About Us</a></button>
+          <button><a routerLink="/about">About Us</a></button>
       </div>
   </div>
 </mat-tab>
@@ -43,7 +43,8 @@
     
 
         <!-- //------------------------------PROGRAMS------------------------------// -->
-    <mat-tab label="PROGRAMS"><h1 class="title-program text-center mb-4">OUR PROGRAMS</h1>
+    <mat-tab label="PROGRAMS">
+      <h1 class="title-program text-center mb-4">OUR PROGRAMS</h1>
       <div class="programs-container">
         <p>The <span style="color: #FF9100;">Code</span><span style="color: #3D96FB;">Geeks</span> provides a Webinar that the organization can offer for the student's needs, with these different topics of Webinar and professional hosts this could help the student to advance and gain more skills and knowledge about coding. 
           The <span style="color: #FF9100;">Code</span><span style="color: #3D96FB;">Geeks</span> have provided or organized a lot of activities and programs to help the members in the community/organization, although it is also open with non-members.</p>
@@ -136,14 +137,31 @@
 
     <!-- //------------------------------FAQS------------------------------// -->
     <mat-tab label="FAQS">
-      <h1 class="title text-center mt-5 mb-4">RESOURCES</h1>
-      <!-- Move the paginator here -->
-      <mat-paginator #paginator
-        [length]="questions.length"
-        [pageSize]="1"
-        [hidePageSize]="hidePageSize"
-        (page)="onPageChange($event)">
-      </mat-paginator>
+      <div class="container">
+        <div class="content-wrapper">
+      
+          <div class="header-FAQS">
+            <h1 class="title-faqs">FAQS</h1>
+            <mat-paginator #paginator
+              [length]="questions.length"
+              [pageSize]="1"
+              [hidePageSize]="hidePageSize"
+              (page)="onPageChange($event)">
+            </mat-paginator>
+          </div>
+      
+          <div *ngIf="questions.length > 0" class="paginator">
+            <div class="outer-box">
+              <div class="inner-box">
+                <div class="box-container" style="white-space: pre-line; text-align: justify;">
+                  <div class="question" [innerHTML]="questions[currentQuestionIndex]"></div>
+                  <div class="answer" [innerHTML]="answers[currentAnswerIndex]"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </mat-tab>
   </mat-tab-group>
 </body>

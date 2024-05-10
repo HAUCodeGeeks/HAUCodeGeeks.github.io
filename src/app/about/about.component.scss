@@ -102,3 +102,45 @@ footer {
   text-align: center;
   padding: 1.5rem;
 }
+
+@media (max-width: 768px) {
+
+  .about-us{
+    margin: 130px 0 100px 0;
+  }
+  
+  .about-container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+  }
+
+  .left-side h1{
+    text-shadow: -3px 3px 0px #fff;
+  }
+  
+  .left-side, .right-side {
+    margin-bottom: 0; /* Remove margin between sections */
+  }
+
+  .left-side, .right-side {
+    max-width: 100%; /* Ensure full width on smaller screens */
+    text-align: center; /* Center content */
+  }
+
+  .left-side p {
+    font-size: 18px; /* Adjust paragraph font size for smaller screens */
+  }
+
+  .right-side img{
+    margin-top: 80px;
+  }
+
+  .box-container{
+    margin-left: 0px !important;
+    margin-right: 0 !important;
+  }
+
+  .slogan{
+    text-align: center;
+  }
+}

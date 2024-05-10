@@ -1,45 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Navbar</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
- <div class="fixed-top"> 
-  <nav class="navbar navbar-expand-sm sticky-top" style="background-color: #2E2E2E;">
-    <div class="container-fluid">
-      <!-- Brand -->
-      <div class="cg-container">
-      <a class="cg" href="/home">
-        <img src="/assets/CG-logo.png" alt="Icon" style="width:60px;">
-        <h2 class="navbar-brand1">CODE</h2><h2 class="navbar-brand2"> GEEKS</h2>
-      </a>
-    </div>
+<div class="fixed-top">
+    <nav class="navbar navbar-expand-sm navbar-dark sticky-top" style="background-color: #2E2E2E;">
+        <div class="container-fluid">
+            <!-- Brand -->
+            <div class="cg-container">
+                <a class="cg navbar-brand" href="/home">
+                    <img src="/assets/CG-logo.png" alt="Icon" style="width:60px;">
+                    <h2 class="navbar-brand1">CODE</h2>
+                    <h2 class="navbar-brand2"> GEEKS</h2>
+                </a>
+            </div>
   
-      <!-- Links -->
-      <ul class="navbar-nav ml-auto nav-links">
-        <li class="nav-item">
-          <a class="nav-link active" href="/home">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/blog">Blog</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/events">Events</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/contact">Contact</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-  <hr class="sticky-top" style="background-color: #2E2E2E;">
-</div>
+            <!-- Toggler/collapsible Button -->
+            <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+  
+            <div [ngClass]="{'collapse': isNavbarCollapsed, 'navbar-collapse': true, 'justify-content-end': true}"
+                id="collapsibleNavbar">
+                <ul class="navbar-nav align-items-end">
+                    <li class="nav-item" [class.active]="isActive('/home')">
+                        <a class="nav-link" routerLink="/home">Home</a>
+                    </li>
+                    <li class="nav-item" [class.active]="isActive('/about')">
+                        <a class="nav-link" routerLink="/about">About</a>
+                    </li>
+                    <li class="nav-item" [class.active]="isActive('/blog')">
+                        <a class="nav-link" routerLink="/blog">Blog</a>
+                    </li>
+                    <li class="nav-item" [class.active]="isActive('/gallery')">
+                        <a class="nav-link" routerLink="/gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item" [class.active]="isActive('/contact')">
+                        <a class="nav-link" routerLink="/contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <hr class="sticky-top" style="background-color: #2E2E2E;">
+  </div>
+  
   <router-outlet></router-outlet>
-  
-  </body>
-  </html>

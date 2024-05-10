@@ -1,0 +1,65 @@
+<div>
+    <h1 class="title text-center">EVENTS</h1>
+    <div class="full-carousel">
+        <div *ngIf="images && images.length > 0" class="carousel-container">
+        <div class="content-event">
+            <ng-container *ngFor="let image of images; let i=index">
+                <img 
+                [src]="image.imageSrc" [alt]="image.imageAlt"
+                [ngClass]="{'image-active': selectedIndex === i}"
+                (click)="selectImage(i)"
+                class="fade"
+                />
+                    <div class="title-event" [innerHTML]="title[titleIndex]"></div>
+                    <div class="description" [innerHTML]="description[descIndex]"></div>
+            </ng-container>
+        </div>
+    
+        <div *ngIf="indicators" class="carousel-dot-container">
+            <span *ngFor="let dot of images; let i=index" 
+            class="dot"
+            [ngClass]="{'active': selectedIndex === i}"
+            (click)="selectImage(i)"
+            ></span>
+        </div>
+        </div>
+    </div>
+  
+    <button *ngIf="controls" class="btn-carousel btn-prev">
+      <i class="fas fa-arrow-circle-left icon-carousel icon-prev"
+        (click)="onPrevClick()"></i>
+    </button>
+  
+    <button *ngIf="controls" class="btn-carousel btn-next">
+      <i class="fas fa-arrow-circle-right icon-carousel icon-next"
+        (click)="onNextClick()"></i>
+    </button>
+</div>
+
+<div class="merch">
+    <h1 class="merch-title">MERCH</h1>
+    <div class="grid-merch">
+        <div class="merch-container">
+            <div class="row">
+                <div class="img-container img-1">
+                  <img src="../../assets/membership-card.png" alt="Image 1" class="img">
+                </div>
+                <div class="img-container img-2">
+                  <img src="../../assets/lanyard.jpg" alt="Image 2" class="img">
+                </div>
+                <div class="img-container img-3">
+                  <img src="../../assets/lanyard1.jpg" alt="Image 3" class="img">
+                </div>
+                <div class="img-container img-4">
+                  <img src="../../assets/ghibli-stickers.jpg" alt="Image 4" class="img">
+                </div>
+                <div class="img-container img-5">
+                  <img src="../../assets/orig-stickers.png" alt="Image 5" class="img">
+                </div>
+              </div>
+              
+              
+        </div>
+    </div>
+<br>
+</div>
