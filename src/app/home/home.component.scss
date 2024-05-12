@@ -201,6 +201,48 @@
 margin-right: 30px
 }
 
+@media (max-width: 768px) {
+  .container-announcement {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+    align-items: center; /* Center horizontally */
+    margin: 5% auto; /* Adjust margin */
+    max-width: 95%; /* Ensure content doesn't overflow */
+  }
+
+  .left-side {
+    margin-left: 0; /* Remove left margin */
+  }
+
+  .right-side {
+    padding: 0; /* Remove padding */
+    text-align: center; /* Center text */
+  }
+
+  .right-side p{
+   font-size: 30px;
+  }
+
+  .announcement-image {
+    max-width: 100% !important; /* Ensure image fits within container */
+    margin-bottom: 20px; /* Add space between image and text */
+  }
+
+  .btn-announcement1,
+  .btn-announcement2 {
+    width: 80%; /* Adjust button width for smaller screens */
+    margin: 10px 0; /* Adjust margin */
+  }
+
+  .btn-announcement1 {
+    margin-right: 0; /* Remove right margin */
+  }
+
+  .announcement-title {
+    font-size: 2em !important;
+    text-shadow: -3px 3px 0px #fff !important; 
+  }
+}
+
 
 // -----PROGRAMS-----//
 .title-program {
@@ -289,7 +331,7 @@ margin-right: 30px
   }
 
 .title {
-    font-size: 3.5rem !important; 
+    font-size: 3.5rem; 
     font-family: LEMONMILK !important;
     text-shadow: -5px 5px 0px #fff;
     color: #FF9100;
