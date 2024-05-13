@@ -40,7 +40,7 @@ export class ContactComponent {
       );
     } else {
       // Display error message if form is not complete
-      this.showNotification('Please fill out all required fields.');
+      this.showNotification('Please fill out all required fields and provide a valid email address.');
     }
 
     return false; // Ensure further default behavior is prevented
@@ -63,7 +63,7 @@ export class ContactComponent {
   }
 
   checkFormCompletion() {
-    // Check if all required fields are filled out
+    // Check if all required fields are filled out and email contains "@" symbol
     this.isFormComplete = Object.values(this.formData).every(value => !!value) && this.formData.email.includes('@');
   }
 }
