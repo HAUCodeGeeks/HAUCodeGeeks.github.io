@@ -17,6 +17,7 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatIconModule} from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import { RouterModule } from '@angular/router';
     FormsModule,
     MatIconModule,
     RouterModule,
+    MatSnackBarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-contact',
@@ -13,10 +14,9 @@ export class ContactComponent {
     subject: '',
     message: ''
   };
-  submissionMessage: string = '';
   readonly APIUrl = "https://backend-tn8d.onrender.com/contact"; // Update with your backend URL
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private snackBar: MatSnackBar) {}
 
   onSubmit(event: Event) {
     event.preventDefault(); // Prevent default form submission behavior
@@ -24,15 +24,15 @@ export class ContactComponent {
     this.http.post<any>(this.APIUrl, this.formData).subscribe(
       response => {
         console.log('Form submitted successfully:', response);
-        // Display submission message
-        this.submissionMessage = 'Your message has been sent successfully!';
+        // Display pop-up notification for successful submission
+        this.showNotification('Your message has been sent successfully!');
         // Reset form after successful submission
         this.resetForm();
       },
       error => {
         console.error('Failed to submit form:', error);
         // Display error message to the user
-        this.submissionMessage = 'An error occurred while sending your message. Please try again later.';
+        this.showNotification('An error occurred while sending your message. Please try again later.');
       }
     );
 
@@ -47,5 +47,11 @@ export class ContactComponent {
       subject: '',
       message: ''
     };
+  }
+
+  showNotification(message: string) {
+    this.snackBar.open(message, 'Close', {
+      duration: 3000, // Duration of the notification in milliseconds
+    });
   }
 }
