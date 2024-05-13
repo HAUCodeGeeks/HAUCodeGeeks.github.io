@@ -26,7 +26,7 @@ import { RouterModule } from '@angular/router';
     AboutComponent,
     ContactComponent,
     BlogComponent,
-    GalleryComponent
+    GalleryComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,7 +37,7 @@ import { RouterModule } from '@angular/router';
     MatPaginatorModule,
     FormsModule,
     MatIconModule,
-    RouterModule
+    RouterModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
