@@ -53,7 +53,7 @@ $haucodegeeks-theme: mat.define-light-theme((
 }
 
 
-// html, body { height: 100%; }
+
 body { 
   margin: 0; 
   font-family: Montserrat;  
@@ -65,4 +65,9 @@ body {
 
   ::-webkit-scrollbar {
     display: none;
+  }
+
+::ng-deep html{
+    --mat-select-placeholder-text-color:white;
+    opacity: 1;
   }

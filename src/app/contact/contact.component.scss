@@ -72,6 +72,11 @@ textarea {
   background-color: transparent;
   text-transform: uppercase;
 }
+
+::placeholder{
+  color: white;
+}
+
 .button-cont input:hover {
   background-color: #FF9100;
 }
@@ -97,6 +102,7 @@ textarea {
   text-align: left;
 }
 
-.mdc-button__label{
-  color: #FF9100;
+::ng-deep .mat-mdc-snack-bar-container {
+  --mat-snack-bar-button-color: #FF9100;
+  --mat-mdc-button-persistent-ripple-color: #FF9100;
 }
