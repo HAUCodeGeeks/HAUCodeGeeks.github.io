@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { ContactService } from '../contact.service';
 
 @Component({
   selector: 'app-contact',
@@ -8,21 +7,40 @@ import { ContactService } from '../contact.service';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
-  formData: any = {};
+  formData = {
+    fullname: '',
+    email: '',
+    subject: '',
+    message: ''
+  };
+  submissionMessage: string = '';
+  readonly APIUrl = "https://backend-tn8d.onrender.com/contact"; // Update with your backend URL
 
-  constructor(private contactService: ContactService) { }
+  constructor(private http: HttpClient) {}
 
   onSubmit(event: Event) {
     event.preventDefault(); // Prevent default form submission behavior
-    this.contactService.sendContactData(this.formData).subscribe(
+
+    this.http.post<any>(this.APIUrl, this.formData).subscribe(
       response => {
-        console.log('Data sent successfully:', response);
-        // Reset form after successful submission if needed
-        this.formData = {};
+        console.log('Form submitted successfully:', response);
+        // Display submission message
+        this.submissionMessage = 'Your message has been sent successfully!';
+        // Reset form after successful submission
+        this.formData = {
+          fullname: '',
+          email: '',
+          subject: '',
+          message: ''
+        };
       },
       error => {
-        console.error('Error while sending data:', error);
+        console.error('Failed to submit form:', error);
+        // Display error message to the user
+        this.submissionMessage = 'An error occurred while sending your message. Please try again later.';
       }
     );
+
+    return false; // Ensure further default behavior is prevented
   }
 }
