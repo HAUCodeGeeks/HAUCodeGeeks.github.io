@@ -64,6 +64,6 @@ export class ContactComponent {
 
   checkFormCompletion() {
     // Check if all required fields are filled out
-    this.isFormComplete = Object.values(this.formData).every(value => !!value);
+    this.isFormComplete = Object.values(this.formData).every(value => !!value) && this.formData.email.includes('@');
   }
 }
