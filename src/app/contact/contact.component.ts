@@ -14,7 +14,7 @@ export class ContactComponent {
     message: ''
   };
   submissionMessage: string = '';
-  readonly APIUrl = "https://backend-tn8d.onrender.com/contacts"; // Update with your backend URL
+  readonly APIUrl = "https://backend-tn8d.onrender.com/contact"; // Update with your backend URL
 
   constructor(private http: HttpClient) {}
 
