@@ -17,7 +17,9 @@ export class ContactComponent {
 
   constructor(private http: HttpClient) {}
 
-  onSubmit() {
+  onSubmit(event: Event) {
+    event.preventDefault(); // Prevent default form submission behavior
+
     this.http.post<any>('https://backend-tn8d.onrender.com/contact', this.formData).subscribe(
       response => {
         console.log('Form submitted successfully:', response);
@@ -37,7 +39,7 @@ export class ContactComponent {
         this.submissionMessage = 'An error occurred while sending your message. Please try again later.';
       }
     );
-    // Prevent default form submission
-    return false;
+
+    return false; // Ensure further default behavior is prevented
   }
 }
