@@ -14,7 +14,7 @@ export class ContactComponent {
     message: ''
   };
   submissionMessage: string = '';
-  readonly APIUrl = "https://backend-tn8d.onrender.com/contact"; // Update with your backend URL
+  readonly APIUrl = "https://backend-tn8d.onrender.com"; // Update with your backend URL
 
   constructor(private http: HttpClient) {}
 
@@ -27,12 +27,7 @@ export class ContactComponent {
         // Display submission message
         this.submissionMessage = 'Your message has been sent successfully!';
         // Reset form after successful submission
-        this.formData = {
-          fullname: '',
-          email: '',
-          subject: '',
-          message: ''
-        };
+        this.resetForm();
       },
       error => {
         console.error('Failed to submit form:', error);
@@ -42,5 +37,15 @@ export class ContactComponent {
     );
 
     return false; // Ensure further default behavior is prevented
+  }
+
+  resetForm() {
+    // Reset form fields
+    this.formData = {
+      fullname: '',
+      email: '',
+      subject: '',
+      message: ''
+    };
   }
 }
