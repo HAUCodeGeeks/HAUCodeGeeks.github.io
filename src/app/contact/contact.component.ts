@@ -37,5 +37,7 @@ export class ContactComponent {
         this.submissionMessage = 'An error occurred while sending your message. Please try again later.';
       }
     );
+    // Prevent default form submission
+    return false;
   }
 }
