@@ -16,14 +16,15 @@ export class ContactComponent {
   };
   readonly APIUrl = "https://backend-tn8d.onrender.com/contact"; // Update with your backend URL
   isFormComplete: boolean = false;
+  isEmailValid: boolean = true;
 
   constructor(private http: HttpClient, private snackBar: MatSnackBar) {}
 
   onSubmit(event: Event) {
     event.preventDefault(); // Prevent default form submission behavior
 
-    // Check if all required fields are filled out
-    if (this.isFormComplete) {
+    // Check if all required fields are filled out and email is valid
+    if (this.isFormComplete && this.isEmailValid) {
       this.http.post<any>(this.APIUrl, this.formData).subscribe(
         response => {
           console.log('Form submitted successfully:', response);
@@ -39,8 +40,9 @@ export class ContactComponent {
         }
       );
     } else {
-      // Display error message if form is not complete
-      this.showNotification('Please fill out all required fields and provide a valid email address.');
+      // Display error message if form is not complete or email is invalid
+      let errorMessage = this.isEmailValid ? 'Please fill out all required fields.' : 'Please provide a valid email address.';
+      this.showNotification(errorMessage);
     }
 
     return false; // Ensure further default behavior is prevented
@@ -63,7 +65,12 @@ export class ContactComponent {
   }
 
   checkFormCompletion() {
-    // Check if all required fields are filled out and email contains "@" symbol
-    this.isFormComplete = Object.values(this.formData).every(value => !!value) && this.formData.email.includes('@');
+    // Check if all required fields are filled out
+    this.isFormComplete = Object.values(this.formData).every(value => !!value);
+  }
+
+  checkEmailValidity() {
+    // Check if email contains "@" symbol
+    this.isEmailValid = this.formData.email.includes('@');
   }
 }
