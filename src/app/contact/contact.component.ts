@@ -14,13 +14,14 @@ export class ContactComponent {
     message: ''
   };
   submissionMessage: string = '';
+  readonly APIUrl = "https://backend-tn8d.onrender.com/contact"; // Assuming your backend URL for contact form submission
 
   constructor(private http: HttpClient) {}
 
   onSubmit(event: Event) {
     event.preventDefault(); // Prevent default form submission behavior
 
-    this.http.post<any>('https://backend-tn8d.onrender.com/contact', this.formData).subscribe(
+    this.http.post<any>(this.APIUrl, this.formData).subscribe(
       response => {
         console.log('Form submitted successfully:', response);
         // Display submission message
