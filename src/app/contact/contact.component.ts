@@ -18,7 +18,7 @@ export class ContactComponent {
   constructor(private http: HttpClient) {}
 
   onSubmit() {
-    this.http.post<any>('https://backend-tn8d.onrender.com/contract', this.formData).subscribe(
+    this.http.post<any>('https://backend-tn8d.onrender.com/contact', this.formData).subscribe(
       response => {
         console.log('Form submitted successfully:', response);
         // Display submission message
