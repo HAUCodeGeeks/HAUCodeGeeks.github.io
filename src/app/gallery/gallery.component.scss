@@ -205,15 +205,34 @@
     max-width: 100% ; /* Adjust max-width for img-1 to take up full width */
   }
   
+  @media (max-width: 1024px) {
+    .btn-carousel {
+      top: 20%;
+  }
+}
+
+
   @media (max-width: 768px) {
     .img-2, .img-3, .img-4, .img-5 {
       max-width: calc(100% - 10px); /* Adjust max-width for img-2 to img-5 for desktop view */
     }
 
     .btn-carousel {
-      top: 10px; /* Reset top positioning */
-      bottom: 20px; /* Adjust bottom positioning */
-      width: 20%; /* Adjust button width */
-    }
+      top: 20%;
+      bottom: 0;
   }
-  
+}
+
+@media (max-width: 425px) {
+  .btn-carousel {
+    top: 20%;
+    bottom: 0;
+}
+}
+
+@media (max-width: 390px) {
+  .btn-carousel {
+    top: 30%;
+    bottom: 0;
+}
+}
