@@ -12,19 +12,19 @@
               <p><img class="contact-icon" src="../assets/web.png" alt="Address Icon"> haucodegeeks.github.io</p>
           </div>
       </div>
-      <<div class="right-side">
+      <div class="right-side">
         <form (ngSubmit)="onSubmit($event)" [action]="null" method="post">
           <label for="fullname" class="label-form">Full Name</label>
-          <input class="input-text" type="text" id="fullname" name="fullname" required [(ngModel)]="formData.fullname" placeholder="Enter your full name" (input)="checkFormCompletion()">
+          <input class="input-text" type="text" id="fullname" name="fullname" required [(ngModel)]="formData.fullname" (input)="checkFormCompletion()">
           
           <label for="email" class="label-form">Email</label>
-          <input class="input-text" type="email" id="email" name="email" required [(ngModel)]="formData.email" placeholder="Enter your email" (input)="checkEmailValidity(); checkFormCompletion()">
+          <input class="input-text" type="email" id="email" name="email" required [(ngModel)]="formData.email" (input)="checkEmailValidity(); checkFormCompletion()">
           
           <label for="subject" class="label-form">Subject</label>
-          <input class="input-text" type="text" id="subject" name="subject" required [(ngModel)]="formData.subject" placeholder="Enter the subject" (input)="checkFormCompletion()">
+          <input class="input-text" type="text" id="subject" name="subject" required [(ngModel)]="formData.subject" (input)="checkFormCompletion()">
           
           <label for="message" class="label-form">Message</label>
-          <textarea class="input-text" id="message" name="message" required [(ngModel)]="formData.message" placeholder="Enter your message" (input)="checkFormCompletion()"></textarea>
+          <textarea class="input-text" id="message" name="message" required [(ngModel)]="formData.message" (input)="checkFormCompletion()"></textarea>
           
           <div class="button-cont">
             <input type="submit" value="Send">

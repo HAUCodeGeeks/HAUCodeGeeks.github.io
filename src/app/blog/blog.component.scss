@@ -2,118 +2,175 @@
   color: white;
 }
 
-.content {
-  padding: 20px;
-  margin-top: 100px;
+.title {
+    font-size: 3.5rem !important; 
+    font-family: LEMONMILK !important;
+    text-shadow: -3px 3px 0px #fff; 
+    color: #FF9100 !important;
+    letter-spacing: 10px !important;
+    margin-top: 145px !important;  
+    text-shadow: -5px 5px 0px #fff;
+  }
+
+  .recents{
+    margin-left: 100px;
+  }
+
+  .recents, .dates  {
+    font-family: Varela;
+  }
+
+
+  hr {
+    color: white;
+    max-width: 100% !important;
+    border: 2px solid;
+    height: 4px;
+    width: 90%;
+    margin: 0 auto;
+    opacity: 0.5;
+  }
+
+  .container-announcement {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin: 3% auto; 
+    max-width: 90%; 
+  }
+  
+  .left-side {
+    text-align: center;
+    flex: 1;
 }
 
-.blog-header {
-  text-align: center;
-  padding: 20px;
-}
-
-.blog-header h1 {
-  margin: 0;
-  font-size: 3.5rem !important; 
-  font-family: LEMONMILK !important;
-  text-shadow: -3px 3px 0px #fff; 
-  color: #FF9100 !important;
-  letter-spacing: 10px !important; 
-  text-shadow: -5px 5px 0px #fff;
-  text-align: center;
-}
-
-.recent-posts {
-  padding: 20px;
-}
-
-.recent-header {
-  display: flex;
-  align-items: center;
-}
-
-.recent-header h2 {
-  margin: 0;
-  margin-right: 10px;
-  font-size: 18px;
-}
-
-hr {
-  flex-grow: 1;
-  border: 0;
-  border-top: 2px solid #fff;
-  margin: 0;
-  opacity: 1;
-}
-
-.dates p{
-  position: absolute;
-  right: 0;
-  margin-right: 40px;
-  margin-bottom: 40px;
-}
-
-.container {
-  display: flex;
-  align-items: center;
-  margin-top: 30px;
-  margin-bottom: 30px;
-}
-.left-side {
-  flex: 1;
-  text-align: center;
-}
-
-.left-side h2{
-  color: #FF9100;
+.description p{
   font-family: Montserrat;
+  font-size: 40px;
+  font-weight: bold;
   text-transform: uppercase;
+  letter-spacing: 3px;
+  width: 70%;
+  color: #FF9100 !important;
+  line-height: 60px;
+  margin: auto;
+  text-align: center;
 }
-
 
 .right-side {
-  flex: 1;
-  text-align: center;
-}
-.image {
-  max-width: 70%;
-  height: auto;
-}
-
-
-button{
-  background-color: transparent;
-  border: 2px solid #FF9100;
-  border-radius: 50px;
-  padding: 6px 20px; 
-  transition: background-color 0.5s;
-  text-transform: uppercase;
-  width: 30%;
-  margin: 10px auto;
-  color: white;
-  font-family: Montserrat;
-  font-size: 16px;
-  text-decoration: none;
-}
-
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .left-side, .right-side {
     flex: 1;
-    margin-bottom: 20px;
-  }
+}
 
-  .right-side img {
-    max-width: 100%; /* Adjust the image size for mobile */
+  
+  .blog-image {
+    width: 65%; 
     height: auto;
   }
 
-  button {
-    width: auto; /* Let the button width adjust based on content */
-    padding: 8px 24px; /* Adjust padding for better appearance */
+
+  .btn-container {
+    font-family: Montserrat;
   }
+
+
+  .btn-blog  {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: transparent;
+    --bs-btn-border-color: #FF9100;
+    --bs-btn-hover-color: white;
+    --bs-btn-hover-bg: #FF9100;
+    --bs-btn-hover-border-color: #FF9100;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    --bs-btn-font-size: 15px !important;
+    width: 25%;
+    border-radius: 50px;
+    margin: 50px auto auto auto;
+  }
+  
+  .dates p{
+    float: right;
+    margin-right: 100px;
+}
+
+/* BLOG - IPAD PRO FORMAT */
+@media (max-width: 1024px) {
+
+  .recents{
+    margin-left: 50px;
+  }
+
+  .description p {
+    font-size: 20px;
+    width: auto;
+  }
+
+  .btn-blog {
+    width: 30%;
+    font-size: 12px;
+  }
+
+  .hr{
+    width: 80%;
+  }
+
+  .dates p {
+    margin-right: 50px;
+    font-size: 14px;
+  }
+
+  .blog-image {
+    margin-left: 30px;
+  }
+}
+
+/* BLOG - IPAD AIR FORMAT */
+@media screen and (max-width: 820px) {
+  .description p {
+    font-size: 15px;
+    line-height: 30px;
+  }
+
+  .btn-blog {
+    width: 35%;
+    font-size: 10px;
+  }
+}
+
+/* BLOG - PHONE FORMAT */
+@media (max-width: 768px) {
+  .recents {
+    margin-top: 50px;
+    margin-left: 25px; 
+  }
+
+  .container-announcement{
+    display: block; 
+    // margin: 0 auto;
+  }
+
+  .description p {
+    font-size: 18px; 
+  }
+
+  .right-side img {
+    display: block;
+    margin: 30px auto; 
+  }
+  
+
+  .btn-blog {
+    width: 35%; 
+    margin-top: 20px; 
+    font-size: 12px;
+  }
+
+  .hr{
+    width: 80%;
+  }
+
+  .dates p {
+    margin-right: 25px;
+  }
+
 }
