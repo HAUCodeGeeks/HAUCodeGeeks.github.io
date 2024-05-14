@@ -48,6 +48,14 @@
   margin-left: 30px;
 }
 
+.btn{
+  --bs-btn-border-width: 2px;
+  --bs-btn-border-radius: 50px;
+  --bs-btn-font-family:Montserrat !important;
+  --bs-btn-font-size: 15px;
+  --bs-btn-font-weight: normal;
+}
+
 //------------------------------MAIN------------------------------//
 .main {
   margin-top: 35%;
@@ -145,23 +153,33 @@
   }
 
   .front-text h1 {
-    font-size: 33px; /* Decrease font size for smaller screens */
+    font-size: 30px; /* Decrease font size for smaller screens */
     letter-spacing: 4px; /* Adjust letter spacing for smaller screens */
     text-shadow: -3px 3px 0px #fff;
   }
 
-  .about-button {
+  .about-button{
     bottom: 30%; /* Adjust bottom position for smaller screens */
+    margin: 0 auto;
   }
 }
 
 
 //------------------------------ANNOUNCEMENT------------------------------//
+.announcement-title {
+  font-size: 3.5rem ; 
+  font-family: LEMONMILK !important;
+  text-shadow: -5px 5px 0px #fff;
+  color: #FF9100;
+  letter-spacing: 10px !important;
+  margin-top: 110px ;
+}
+
 .container-announcement {
   display: flex;
   justify-content: center; 
   align-items: center; 
-  margin: 5% auto; 
+  margin: 3% auto; 
   max-width: fit-content; 
 }
 
@@ -180,28 +198,90 @@
 }
 
 .announcement-image {
-  max-width: 80% !important; 
+  max-width: 80%; 
   height: auto;
 }
 
 .btn-announcement1, .btn-announcement2  {
-  --bs-btn-color: #fff;
-  --bs-btn-bg: transparent;
-  --bs-btn-border-color: #FF9100;
-  --bs-btn-hover-color: white;
-  --bs-btn-hover-bg: #FF9100;
-  --bs-btn-hover-border-color: #FF9100;
+  background-color: transparent;
+  border: 2px solid #FF9100;
+  border-radius: 50px;
+  padding: 6px; 
+  transition: background-color 0.5s;
   text-transform: uppercase;
   letter-spacing: 3px;
-  --bs-btn-font-size: 15px !important;
   width: 33%;
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 15px;
+  text-decoration: none; 
+  text-align: center;
+}
+
+.btn-announcement1:hover, .btn-announcement2:hover{
+  background-color: #FF9100;
 }
 
 .btn-announcement1{
 margin-right: 30px
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+  .announcement-title {
+    font-size: 2.5em !important;
+    text-shadow: -3px 3px 0px #fff !important;
+    margin-bottom: 40px !important;
+}
+
+  .container-announcement {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+    align-items: center; /* Center horizontally */
+    margin: 5% auto; /* Adjust margin */
+    max-width: 95%; /* Ensure content doesn't overflow */
+  }
+
+  .left-side {
+    margin-left: 0; /* Remove left margin */
+  }
+
+  .right-side {
+    padding: 0; /* Remove padding */
+    text-align: center; /* Center text */
+   
+  }
+
+  .right-side p{
+   font-size: 30px;
+  }
+
+  .announcement-image {
+    width: 70%; /* Ensure image fits within container */
+    display: block; /* Ensure it's treated as a block-level element */
+    margin: 0 auto;
+    margin-bottom: 20px; /* Add space between image and text */
+}
+
+
+  .btn-announcement1,
+  .btn-announcement2 {
+    width: 80%; /* Adjust button width for smaller screens */
+    margin: 10px 0; /* Adjust margin */
+  }
+
+  .btn-announcement1 {
+    margin-right: 0; /* Remove right margin */
+  }
+
+}
+
+
+@media (max-width: 430px) {
+  .announcement-title {
+    font-size: 1.9em !important;
+    text-shadow: -3px 3px 0px #fff !important;
+    margin-bottom: 40px !important;
+}
+
   .container-announcement {
     flex-direction: column; /* Stack elements vertically on smaller screens */
     align-items: center; /* Center horizontally */
@@ -223,7 +303,7 @@ margin-right: 30px
   }
 
   .announcement-image {
-    max-width: 100% !important; /* Ensure image fits within container */
+    width: 100% !important; /* Ensure image fits within container */
     margin-bottom: 20px; /* Add space between image and text */
   }
 
@@ -237,10 +317,6 @@ margin-right: 30px
     margin-right: 0; /* Remove right margin */
   }
 
-  .announcement-title {
-    font-size: 2em !important;
-    text-shadow: -3px 3px 0px #fff !important; 
-  }
 }
 
 
@@ -279,41 +355,71 @@ margin-right: 30px
 
 .program-btn {
   margin-right: 30px; 
-}
-
-
-.program-btn{
-  --bs-btn-color: #fff;
-  --bs-btn-bg: transparent;
-  --bs-btn-border-color: #FF9100;
-  --bs-btn-hover-color: white;
-  --bs-btn-hover-bg: #FF9100;
-  --bs-btn-hover-border-color: #FF9100;
+  background-color: transparent;
+  border: 2px solid #FF9100;
+  border-radius: 50px;
+  padding: 6px 20px; 
+  transition: background-color 0.5s;
   text-transform: uppercase;
-  letter-spacing: 3px;
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 15px;
+  text-decoration: none; 
 }
 
-@media (max-width: 768px) {
+
+.program-btn:hover{
+ background-color: #FF9100;
+}
+
+
+
+@media (max-width: 1024px) {
+
+  .programs-container p{
+    font-size: 25px;
+  }
+
+  .btn-container {
+    margin-bottom: 10px;
+  }
+
+  .program-btn {
+    width: 90%; /* Allow buttons to take natural width */
+    margin-right: 10px;
+    margin-bottom: 20px;
+    font-size: 15px;
+  }
+
+}
+
+
+@media (max-width: 430px) {
   .title-program {
     font-size: 2.5rem; /* Increase font size for larger screens */
-    text-shadow: -3px 3px 0px #fff;
+    text-shadow: -4px 4px 0px #fff;
   }
 
   .programs-container{
     padding: 0 50px; /* Increase padding for larger screens */
     width: 100%;
-
   }
 
   .btn-container {
-    flex-direction: row; /* Arrange buttons horizontally */
+    text-align: center;
     margin-bottom: 10px;
   }
 
+  .programs-container p{
+    font-size: 18px;
+  }
+
   .program-btn {
-    width: 40%; /* Allow buttons to take natural width */
-    margin-right: 32px; /* Add margin between buttons */
+    width: 70%; /* Allow buttons to take natural width */
+    margin: 0 auto;
+    margin-right: 10px;
     margin-bottom: 20px;
+    font-size: 18px;
   }
 }
 
@@ -321,16 +427,16 @@ margin-right: 30px
 //------------------------------RESOURCES------------------------------//
 
   .smaller-image {
-    max-width: 55%;
+    width: 55%;
     height: auto;
   }
 
   .resources-content{
-    max-width: 50%;
+    width: 50%;
     margin: 20px auto;
   }
 
-.title {
+.title-resources {
     font-size: 3.5rem; 
     font-family: LEMONMILK !important;
     text-shadow: -5px 5px 0px #fff;
@@ -339,25 +445,64 @@ margin-right: 30px
   }
 
   .btn-outline-primary {
-    --bs-btn-color: #fff;
-    --bs-btn-bg: transparent;
-    --bs-btn-border-color: #FF9100;
-    --bs-btn-hover-color: white;
-    --bs-btn-hover-bg: #FF9100;
-    --bs-btn-hover-border-color: #FF9100;
+  background-color: transparent;
+  border: 2px solid #FF9100;
+  border-radius: 50px;
+  padding: 6px 20px; 
+  transition: background-color 0.5s;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 16px;
+  text-decoration: none;
 }
 
-.btn{
-  --bs-btn-border-width: 2px;
-  --bs-btn-border-radius: 50px;
-  --bs-btn-font-family:Montserrat !important;
-  --bs-btn-font-size: 15px;
-  --bs-btn-font-weight: normal;
+.btn-outline-primary:hover{
+  background-color: #FF9100;
 }
+
+@media screen and (min-width: 768px) and (max-width: 1024px)  {
+  .title-resources {
+      font-size: 3.5rem; /* Further decrease font size for smaller screens */
+      letter-spacing: 3px; /* Further adjust letter spacing */
+  }
+
+  .smaller-image {
+    width: 100% !important;
+  }
+
+  .custom-resources .container-resources .row {
+    display: block; /* Change the display to block for iPad */
+    margin-left: 30%;
+    width: 100%; /* Limit the width of the row for better centering */
+}
+  .btn-outline-primary{
+    font-size: 20px;
+    width: 240%;
+  }
+}
+
+@media (max-width: 430px) {
+  .title-resources {
+      font-size: 3.5rem !important; /* Further decrease font size for smaller screens */
+      letter-spacing: 3px !important; /* Further adjust letter spacing */
+      text-shadow: -5px 5px 0px #fff !important;
+  }
+}
+
 
 //------------------------------POSTS------------------------------//
+.title-posts {
+  font-size: 3.5rem; 
+  font-family: LEMONMILK !important;
+  text-shadow: -5px 5px 0px #fff;
+  color: #FF9100;
+  letter-spacing: 10px !important;
+}
+
 .container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
   padding: 20px;
@@ -373,7 +518,7 @@ margin-right: 30px
   text-align: center;
   display: flex;
   flex-direction: column;
-  height: 60vh;
+  height: auto;
 }
 
 .box2{
@@ -401,20 +546,78 @@ margin-right: 30px
 }
 
 .btn-post1, .btn-post2{
-  --bs-btn-color: #000000;
-  --bs-btn-bg: transparent;
-  --bs-btn-border-color: #FF9100;
-  --bs-btn-hover-color: white;
-  --bs-btn-hover-bg: #FF9100;
-  --bs-btn-hover-border-color: #FF9100;
+  background-color: transparent;
+  border: 2px solid #FF9100;
+  border-radius: 50px;
+  padding: 6px 20px; 
+  transition: background-color 0.5s;
   text-transform: uppercase;
   width: 50%;
   margin: 10px auto;
+  color: black;
+  font-family: Montserrat;
+  font-size: 16px;
+  text-decoration: none;
 }
 
 .btn-post2{
   margin-top: 50px !important;
 }
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .title-posts {
+    font-size: 2.8rem; /* Adjust font size for iPad */
+    letter-spacing: 7px !important; /* Adjust letter spacing for iPad */
+    text-shadow: -4px 4px 0px #fff; /* Adjust text shadow for iPad */
+  }
+
+  .box1 , .box2 {
+    width: 50%; /* Adjust width for iPad */
+  }
+
+  .box2 {
+    margin-left: 0; /* Adjust margin-left for iPad */
+  }
+
+  .description1, .description2 {
+    font-size: 18px; /* Adjust font size for iPad */
+    width: 100%; /* Adjust width for iPad */
+  }
+
+  .btn-post1, .btn-post2 {
+    width: 70%; /* Adjust width for iPad */
+    font-size: 14px; /* Adjust font size for iPad */
+  }
+}
+
+
+
+@media screen and (max-width: 767px) {
+  .title-posts {
+    font-size: 2.5rem; /* Further decrease font size for smaller screens */
+    letter-spacing: 5px !important; /* Further decrease letter spacing for smaller screens */
+    text-shadow: -3px 3px 0px #fff;
+  }
+
+  .box1 , .box2 {
+    width: 100%; /* Adjust width for smaller screens */
+  }
+
+  .box2{
+    margin-left: 0;
+  }
+
+  .description1, .description2 {
+    font-size: 16px; /* Further decrease font size for smaller screens */
+    width: 100%; /* Adjust width for smaller screens */
+  }
+
+  .btn-post1, .btn-post2 {
+    width: 80%; /* Adjust width for smaller screens */
+    font-size: 12px; /* Further decrease font size for smaller screens */
+  }
+}
+
 
 
 //------------------------------FAQ------------------------------//
@@ -519,3 +722,83 @@ margin-right: 30px
 .answer {
   font-family: Montserrat;
 }
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    padding: 20px; /* Add padding for better spacing */
+  }
+
+  .title-faqs {
+    font-size: 2.5rem; /* Decrease font size for smaller screens */
+    margin-bottom: 20px; /* Add spacing below the title */
+  }
+
+  .header-FAQS {
+    text-align: center; /* Center the title */
+    margin-top: 0 ;
+  }
+
+  .outer-box {
+    width: 100%; /* Adjust width for smaller screens */
+    height: 100%;
+  }
+
+  .inner-box {
+    padding: 10px; /* Add padding for better spacing */
+  }
+
+  .box-container {
+    text-align: justify; /* Justify text */
+  }
+
+  .question, .answer {
+    font-size: 16px; /* Decrease font size for smaller screens */
+    margin-bottom: 10px; /* Add spacing between questions and answers */
+  }
+
+  mat-paginator {
+    margin-top: 150px; /* Add spacing above the paginator */
+  }
+}
+
+
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 767px) {
+  .container {
+    padding: 20px; /* Add padding for better spacing */
+  }
+
+  
+  .title-faqs {
+    font-size: 2.5rem; /* Decrease font size for smaller screens */
+    margin-bottom: 20px; /* Add spacing below the title */
+  }
+
+  .header-FAQS {
+    text-align: center; /* Center the title */
+    margin-top: 0 ;
+  }
+
+  .outer-box {
+    width: 100%; /* Adjust width for smaller screens */
+    height: 100%;
+  }
+
+  .inner-box {
+    padding: 10px; /* Add padding for better spacing */
+  }
+
+  .box-container {
+    text-align: justify; /* Justify text */
+  }
+
+  .question, .answer {
+    font-size: 16px; /* Decrease font size for smaller screens */
+    margin-bottom: 10px; /* Add spacing between questions and answers */
+  }
+
+  mat-paginator {
+    margin-top: 130px; /* Add spacing above the paginator */
+  }
+}
+

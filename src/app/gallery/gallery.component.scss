@@ -205,81 +205,15 @@
     max-width: 100% ; /* Adjust max-width for img-1 to take up full width */
   }
   
-  @media (min-width: 768px) {
+  @media (max-width: 768px) {
     .img-2, .img-3, .img-4, .img-5 {
-      max-width: calc(50% - 10px); /* Adjust max-width for img-2 to img-5 for desktop view */
+      max-width: calc(100% - 10px); /* Adjust max-width for img-2 to img-5 for desktop view */
+    }
+
+    .btn-carousel {
+      top: 10px; /* Reset top positioning */
+      bottom: 20px; /* Adjust bottom positioning */
+      width: 20%; /* Adjust button width */
     }
   }
   
-  
-  
-  
-  
-// .img-1{
-// //   background: url('../../assets/membership-card.png') no-repeat center;
-// //   background-size: cover;
-//   width: 100%;
-//   height: 100%;
-//   object-fit: cover;
-// }
-
-// .img-2{
-//   background: url('../../assets/lanyard.jpg') no-repeat center ;
-//   background-size: cover;
-//   width: 100%;
-// }
-
-// .img-3{
-//   background: url('../../assets/lanyard1.jpg') no-repeat center ;
-//   background-size: cover;
-//   width: 100%;
-  
-// }
-
-// .img-4 {
-//   background: url('../../assets/ghibli-stickers.jpg') no-repeat center ;
-//   background-size: cover;
-//   width: 100%;
-  
-// }
-
-// .img-5 {
-//   background: url('../../assets/orig-stickers.png') no-repeat center ;
-//   background-size: cover;
-//   width: 100%;
-  
-// }
-
-// @media (min-width: 320px) {
-
-//   .merch-container {
-//     max-width: 90%;
-//   }
-//   .row{
-//     height: 600px; 
-//   }
-  
-//   .img-1 {
-//     // background-size: contain; /* Change to 'contain' */
-//     width: 90%;
-//     height: 90%;
-//     // position: relative;
-//   }
-  
-
-//   .img-2, .img-3, .img-4, .img-5 {
-//     display: flex;
-//     width: 48.3%;
-//     height: 100%;
-//   }
-
-
-//   // .img-4 {
-//   //   width: 24%;
-//   // }
-
-//   // .img-2,
-//   // .img-3 {
-//   //   width: 70%;
-//   // }
-// }

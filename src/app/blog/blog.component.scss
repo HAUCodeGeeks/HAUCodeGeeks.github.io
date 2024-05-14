@@ -1,180 +1,143 @@
-*{
+* {
   color: white;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .title {
-    font-size: 3.5rem !important; 
-    font-family: LEMONMILK !important;
-    text-shadow: -3px 3px 0px #fff; 
-    color: #FF9100 !important;
-    letter-spacing: 10px !important;
-    margin-top: 145px !important;  
-    text-shadow: -5px 5px 0px #fff;
-  }
-
-  .recents{
-    margin-left: 50px;
-  }
-
-
-  hr {
-    color: white;
-    max-width: 100% !important;
-    border: 2px solid;
-    height: 4px;
-    width: 95%;
-    margin: 0 auto;
-  }
-
-  .container-announcement {
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    margin: 3% auto; 
-    max-width: fit-content; 
-  }
-  
-  .left-side {
-    text-align: center;
-    flex: 8%;
-    margin-left: 8%;
+  font-size: 3.5rem !important; 
+  font-family: LEMONMILK !important;
+  text-shadow: -3px 3px 0px #fff; 
+  color: #FF9100 !important;
+  letter-spacing: 10px !important;
+  margin-top: 145px !important;  
+  text-shadow: -5px 5px 0px #fff;
+  text-align: center;
 }
 
-.description p{
+.recents {
+  margin-left: 50px;
+}
+
+hr {
+  color: white;
+  border: 2px solid;
+  height: 4px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.container-announcement {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  margin: 48px auto;
+  max-width: fit-content; 
+}
+
+.left-side {
+  flex: 1; /* Take up 50% of the container */
+  text-align: center; /* Center the button horizontally */
+  justify-content: center; /* Horizontally center image */
+}
+
+.description {
+  height: 150px; /* Set a fixed height for the description container */
+  display: flex; /* Use flexbox to vertically center text */
+  align-items: center; /* Vertically center text */
+  justify-content: center; /* Horizontally center text */
+}
+
+.description p {
   font-family: Montserrat;
-  font-size: 40px;
+  font-size: 24px;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 3px;
-  margin-left: 70px;
-  width: 70%;
   color: #FF9100 !important;
+  margin: 0; /* Reset margin */
+  padding: 0 20px; /* Add horizontal padding */
+  text-align: center; /* Center text horizontally */
 }
 
 .right-side {
-    flex: 20%;
+  flex: 1; /* Take up 50% of the container */
+  display: flex;
+  justify-content: center; /* Horizontally center image */
 }
 
-  
+.blog-image {
+  width: 50%; 
+  height: auto;
+}
+
+.btn-container{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-blog  {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: transparent;
+  --bs-btn-border-color: #FF9100;
+  --bs-btn-hover-color: white;
+  --bs-btn-hover-bg: #FF9100;
+  --bs-btn-hover-border-color: #FF9100;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  --bs-btn-font-size: 15px !important;
+  width: 50%;
+  border-radius: 50px;
+  margin-top: 20px;
+}
+
+.dates p {
+  float: right;
+  margin-right: 50px;
+}
+
+
+@media (max-width: 430px) {
+  .container-announcement {
+    position: relative;
+    text-align: center;
+    margin: 3% auto;
+    max-width: fit-content;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items horizontally */
+  }
+
+  .description p {
+    font-size: 18px;
+    width: 90%; /* Adjust width to avoid overflow */
+    text-align: center;
+    margin-bottom: 10px; /* Add margin-bottom for spacing between description and image */
+    margin-left: auto; /* Center the description horizontally */
+    margin-right: auto; /* Center the description horizontally */
+    margin-top: 30px;
+  }
+
   .blog-image {
-    max-width: 65%; 
+    max-width: 90%;
     height: auto;
-  }
-  
-  .btn-blog  {
-    --bs-btn-color: #fff;
-    --bs-btn-bg: transparent;
-    --bs-btn-border-color: #FF9100;
-    --bs-btn-hover-color: white;
-    --bs-btn-hover-bg: #FF9100;
-    --bs-btn-hover-border-color: #FF9100;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    --bs-btn-font-size: 15px !important;
-    width: 30%;
-    border-radius: 50px;
-    margin-top: 10%;
-    margin-right: 100px;
-  }
-  
-  .dates p{
-    float: right;
-    margin-right: 50px;
-}
-
-@media (max-width: 1024px) {
-  .recents{
-    display: block; 
-    margin-top: 50px;
-    margin-left: 10px; /* Remove left margin */
+    margin-top: auto; /* Align image at the bottom of the container */
+    margin-bottom: 20px; /* Add some spacing between image and buttons */
   }
 
-  .description p {
-    font-size: 18px; /* Adjust font size for smaller screens */
-    margin-left: 0; /* Remove left margin */
-    width: auto; /* Remove fixed width */
-    text-align: center; /* Center text */
-  }
-
-  .left-side {
-    margin-left: 0; /* Remove left margin */
-    flex: 1; /* Take full width */
-  }
-
-  .btn-blog {
-    width: 50%; /* Take full width */
-    margin-top: 20px; /* Adjust margin */
-    margin-left: 25%;
+  .btn {
+    margin-top: 20px;
     font-size: 14px;
+    width: 100%;
+    margin-left: auto !important; /* Center the button horizontally */
+    margin-right: auto; /* Center the button horizontally */
+    margin-bottom: 50px;
   }
 
-  .hr{
-    width: 80%;
-  }
-
-  .dates p {
-    text-align: center; /* Center text */
-    font-size: 14px;
-  }
-
-  .code-geeks-registry{
-    margin-right: 0px !important; 
-  }
-
-  .btn-code-geeks-registry{
-    margin-left: 25%;
-  }
-}
-
-
-@media (max-width: 768px) {
-  .recents {
-    margin-top: 50px;
-    margin-left: 10px; /* Remove left margin */
-  }
-
-  .container-announcement{
-    display: block; 
-    // margin: 0 auto;
-  }
-
-  .description p {
-    font-size: 18px; /* Adjust font size for smaller screens */
-    margin-left: 0; /* Remove left margin */
-    width: auto; /* Remove fixed width */
-    text-align: center; /* Center text */
-  }
-
-  .left-side {
-    margin-left: 0; /* Remove left margin */
-    flex: 1; /* Take full width */
-  }
-
-  .right-side img {
-    display: block; /* Ensure the image behaves as a block element */
-    margin: 0 auto; /* Center the image horizontally */
-  }
-  
-
-  .btn-blog {
-    width: 80%; /* Take full width */
-    margin-top: 20px; /* Adjust margin */
-    margin-left: 20px;
-    font-size: 14px;
-  }
-
-  .hr{
-    width: 80%;
-  }
-
-  .dates p {
-    text-align: center; /* Center text */
-    font-size: 14px;
-  }
-
-  .code-geeks-registry{
-    margin-right: 10px !important; 
-    margin-left: 10px !important;
+  .left-side{
+    margin-left: auto; /* Center the button horizontally */
+    margin-right: auto; /* Center the button horizontally */
   }
 }
 
