@@ -714,7 +714,7 @@ margin-right: 30px
   width: 250px;
 }
 
-.container {
+.faqs-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -800,82 +800,100 @@ margin-right: 30px
   font-family: Montserrat;
 }
 
+/* FAQS - IPAD PRO FORMAT */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  .container {
-    padding: 20px; /* Add padding for better spacing */
+
+  .mat-mdc-paginator {
+    right: 12%;
+  }
+  .faqs-container {
+    margin-top: 50px;
+    padding: 20px; 
   }
 
   .title-faqs {
-    font-size: 2.5rem; /* Decrease font size for smaller screens */
-    margin-bottom: 20px; /* Add spacing below the title */
+    font-size: 2.5rem; 
+    margin-bottom: 20px; 
   }
 
   .header-FAQS {
-    text-align: center; /* Center the title */
-    margin-top: 0 ;
+    text-align: center; 
   }
 
   .outer-box {
-    width: 100%; /* Adjust width for smaller screens */
+    margin-top: 50px;
+    width: 100%; 
     height: 100%;
   }
 
   .inner-box {
-    padding: 10px; /* Add padding for better spacing */
+    padding: 45px; 
   }
 
   .box-container {
-    text-align: justify; /* Justify text */
+    text-align: justify;
   }
 
-  .question, .answer {
-    font-size: 16px; /* Decrease font size for smaller screens */
-    margin-bottom: 10px; /* Add spacing between questions and answers */
+  .question {
+    font-size: 20px;
+  }
+
+  .answer {
+    font-size: 16px; 
+    margin-bottom: 10px; 
   }
 
   mat-paginator {
-    margin-top: 150px; /* Add spacing above the paginator */
-  }
+    margin-top: 150px; 
+}
 }
 
 
-/* Media Query for Mobile Devices */
+/* FAQS - PHONE FORMAT */
 @media screen and (max-width: 767px) {
-  .container {
-    padding: 20px; /* Add padding for better spacing */
+  .faqs-container {
+    margin-top: 30px;
+    padding: 15px; 
+    max-width: 100%;
   }
 
   
   .title-faqs {
-    font-size: 2.5rem; /* Decrease font size for smaller screens */
-    margin-bottom: 20px; /* Add spacing below the title */
+    font-size: 2.5rem; 
+    margin-bottom: 20px; 
   }
 
   .header-FAQS {
-    text-align: center; /* Center the title */
+    text-align: center; 
     margin-top: 0 ;
   }
 
   .outer-box {
-    width: 100%; /* Adjust width for smaller screens */
+    margin-top: 30px;
+    width: 100%; 
     height: 100%;
   }
 
   .inner-box {
-    padding: 10px; /* Add padding for better spacing */
+    padding: 20px; 
+  }
+
+  .question {
+    font-size: 18px;
+  }
+
+  .answer {
+    font-size: 14px; 
+    margin-bottom: 10px; 
   }
 
   .box-container {
-    text-align: justify; /* Justify text */
-  }
-
-  .question, .answer {
-    font-size: 16px; /* Decrease font size for smaller screens */
-    margin-bottom: 10px; /* Add spacing between questions and answers */
+    text-align: justify; 
   }
 
   mat-paginator {
-    margin-top: 130px; /* Add spacing above the paginator */
+    margin-top: 130px; 
   }
 }
+
 
