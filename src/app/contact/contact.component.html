@@ -13,23 +13,27 @@
           </div>
       </div>
       <div class="right-side">
-        <form (ngSubmit)="onSubmit($event)" [action]="null" method="post">
+        <form (submit)="onSubmit()">
           <label for="fullname" class="label-form">Full Name</label>
-          <input class="input-text" type="text" id="fullname" name="fullname" required [(ngModel)]="formData.fullname" (input)="checkFormCompletion()">
+          <input class="input-text" type="text" id="fullname" name="fullname" [(ngModel)]="formData.fullname">
           
           <label for="email" class="label-form">Email</label>
-          <input class="input-text" type="email" id="email" name="email" required [(ngModel)]="formData.email" (input)="checkEmailValidity(); checkFormCompletion()">
+          <input class="input-text" type="email" id="email" name="email" [(ngModel)]="formData.email">
           
           <label for="subject" class="label-form">Subject</label>
-          <input class="input-text" type="text" id="subject" name="subject" required [(ngModel)]="formData.subject" (input)="checkFormCompletion()">
+          <input class="input-text" type="text" id="subject" name="subject" [(ngModel)]="formData.subject">
           
           <label for="message" class="label-form">Message</label>
-          <textarea class="input-text" id="message" name="message" required [(ngModel)]="formData.message" (input)="checkFormCompletion()"></textarea>
+          <textarea class="input-text" id="message" name="message" [(ngModel)]="formData.message"></textarea>
           
           <div class="button-cont">
-            <input type="submit" value="Send">
+            <button type="submit">Send</button>
           </div>
         </form>
       </div>
       
+    
+      
+      
+</div>
 </div>
