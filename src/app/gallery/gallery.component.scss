@@ -3,7 +3,8 @@
   color: #FF9100;
   text-shadow: -5px 5px 0px #fff;
   letter-spacing: 10px !important;
-  margin-top: 145px !important;  
+  margin-top: 145px !important;
+  font-family: LEMONMILK;
 }
 
 .carousel-container {
@@ -256,10 +257,25 @@ font-size: 20px;
   }
 }
 
+/* GALLERY - 7TH GEN IPAD FORMAT (LANDSCAPE)*/
+@media screen and (max-width: 1070px) {
+  .description {
+    font-size: 14px;
+    width: 75%;
+  }
+}
+
 /* GALLERY - IPAD AIR FORMAT */
 @media screen and (max-width: 820px) {
   .title-event {
     font-size: 40px;
+  }
+}
+
+/* GALLERY - 7TH GEN IPAD FORMAT (PORTRAIT)*/
+@media screen and (max-width: 790px) {
+  .title-event {
+    text-shadow: -3px 3px 0px #fff;
   }
 }
 

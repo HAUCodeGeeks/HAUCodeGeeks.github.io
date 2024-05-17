@@ -257,7 +257,7 @@
   background-color: transparent;
   border: 2px solid #FF9100;
   border-radius: 50px;
-  padding: 6px; 
+  padding: 10px; 
   transition: background-color 0.5s;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -267,6 +267,7 @@
   font-size: 15px;
   text-decoration: none; 
   text-align: center;
+  font-weight: normal;
 }
 
 .btn-announcement1:hover, .btn-announcement2:hover{
@@ -276,6 +277,14 @@
 .btn-announcement1{
 margin-right: 30px
 }
+
+/* ANNOUNCEMENT - IPAD PRO FORMAT (LANDSCAPE) */
+@media screen and (max-width: 1366px) {
+  .btn-announce a{
+    font-size: 10px;
+  }
+}
+
 
 /* ANNOUNCEMENT - IPAD PRO FORMAT*/
 @media (max-width: 1024px) {
@@ -416,7 +425,9 @@ margin-right: 30px
 
 .btn-container {
   margin-top: 45px; 
+  margin-bottom: 50px;
 }
+
 
 .program-btn {
   margin-right: 30px; 
@@ -532,6 +543,14 @@ margin-right: 30px
   background-color: #FF9100;
 }
 
+/* RESOURCES - IPAD PRO FORMAT (LANDSCAPE) */
+@media screen and (max-width: 1366px) {
+  .d-flex a {
+    font-size: 11px;
+  }
+}
+
+
 /* RESOURCES - IPAD PRO FORMAT */
 @media screen and (min-width: 768px) and (max-width: 1024px)  {
   .title-resources {
@@ -577,13 +596,14 @@ margin-right: 30px
   letter-spacing: 10px !important;
 }
 
-.container {
+.post-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
   padding: 20px;
-  align-items: center; 
+  align-items: center;
+  margin-bottom: 50px;
 }
 
 .box1 , .box2 {
@@ -640,6 +660,14 @@ margin-right: 30px
 .btn-post2{
   margin-top: 50px !important;
 }
+
+/* POSTS - IPAD PRO FORMAT (LANDSCAPE) */
+@media screen and (max-width: 1366px) {
+  .box1 a, .box2 a {
+    font-size: 11px;
+  }
+}
+
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .title-posts {
@@ -719,6 +747,7 @@ margin-right: 30px
   justify-content: center;
   align-items: center;
   color: white !important;
+  margin-bottom: 50px;
 }
 
 .content-wrapper {
@@ -800,6 +829,13 @@ margin-right: 30px
   font-family: Montserrat;
 }
 
+/* FAQS - IPAD PRO FORMAT (LANDSCAPE) */
+@media screen and (max-width: 1366px) {
+  .mat-mdc-paginator {
+    right: 10%;
+  }
+}
+
 /* FAQS - IPAD PRO FORMAT */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
 
@@ -851,6 +887,11 @@ margin-right: 30px
 
 /* FAQS - PHONE FORMAT */
 @media screen and (max-width: 767px) {
+  .mat-mdc-paginator {
+    right: 20%;
+  }
+
+
   .faqs-container {
     margin-top: 30px;
     padding: 15px; 
