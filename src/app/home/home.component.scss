@@ -282,7 +282,11 @@ margin-right: 30px
 /* ANNOUNCEMENT - IPAD PRO FORMAT (LANDSCAPE) */
 @media screen and (max-width: 1366px) {
   .btn-announce a{
-    font-size: 10px;
+    font-size: 15px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+
   }
 }
 
@@ -294,6 +298,7 @@ margin-right: 30px
     text-shadow: -3px 3px 0px #fff !important;
     margin-bottom: 40px !important;
     line-height: 50px;
+    font-size: 15px;
 }
 
   .container-announcement {
@@ -385,7 +390,7 @@ margin-right: 30px
   .btn-announcement2 {
     width: 50%; 
     margin: 10px 0; 
-    font-size: 12px;
+    font-size: 12px !important;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -677,7 +682,7 @@ margin-right: 30px
 /* POSTS - IPAD PRO FORMAT (LANDSCAPE) */
 @media screen and (max-width: 1366px) {
   .box1 a, .box2 a {
-    font-size: 11px;
+    font-size: 15px;
   }
 }
 
@@ -704,7 +709,7 @@ margin-right: 30px
 
   .btn-post1, .btn-post2 {
     width: 70%; /* Adjust width for iPad */
-    font-size: 14px; /* Adjust font size for iPad */
+    font-size: 15px; /* Adjust font size for iPad */
   }
 }
 
